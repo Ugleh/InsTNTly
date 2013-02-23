@@ -48,7 +48,7 @@ public class InsTNTlyListener implements Listener{
 				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST));
 				tntExists = true;
 			}else if(blk.getRelative(BlockFace.DOWN).getType().equals(Material.TNT)){
-				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST));
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN));
 				tntExists = true;
 			}
 			if(tntExists){ //If tntExists is set to true, then there is a TNT Block in the area.
