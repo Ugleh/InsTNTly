@@ -35,6 +35,21 @@ public class InsTNTlyListener implements Listener{
 			}else if(blk.getRelative(BlockFace.WEST).getType().equals(Material.TNT)){
 				tntBlocks.add(blk.getRelative(BlockFace.WEST));
 				tntExists = true;
+			}else if(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.NORTH).getType().equals(Material.TNT)){
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.NORTH));
+				tntExists = true;
+			}else if(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.EAST).getType().equals(Material.TNT)){
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.EAST));
+				tntExists = true;
+			}else if(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.SOUTH).getType().equals(Material.TNT)){
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.SOUTH));
+				tntExists = true;
+			}else if(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST).getType().equals(Material.TNT)){
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST));
+				tntExists = true;
+			}else if(blk.getRelative(BlockFace.DOWN).getType().equals(Material.TNT)){
+				tntBlocks.add(blk.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST));
+				tntExists = true;
 			}
 			if(tntExists){ //If tntExists is set to true, then there is a TNT Block in the area.
 				for(Block tntBlk : tntBlocks){
